@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egypt as You've Never Seen It Before - Marsa Alam & St. Catherine</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        egyptGold: '#D4AF37',
+                        redSeaBlue: '#0077BE',
+                        desertSand: '#F4A460',
+                        mountainStone: '#4A5568',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)), url('https://res.cloudinary.com/kasit9gv/image/upload/v1792047331/Egypt__Land_of_Timeless_Wonders.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .transition-smooth { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="inline-flex items-center justify-center bg-amber-500 text-slate-900 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider shadow">
+                    <i class="fa-solid fa-flag mr-1.5"></i> Egypt 6B
+                </span>
+                <span class="font-extrabold text-lg sm:text-xl tracking-tight bg-gradient-to-r from-amber-300 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+                    Red Sea & Sinai
+                </span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#destinations" class="hover:text-cyan-400 transition-smooth">Destinations</a>
+                <a href="#quickinfo" class="hover:text-cyan-400 transition-smooth">Quick Facts</a>
+                <a href="#funfacts" class="hover:text-cyan-400 transition-smooth">Fun Facts</a>
+                <a href="#food" class="hover:text-cyan-400 transition-smooth">Food</a>
+                <a href="#stage4" class="hover:text-cyan-400 transition-smooth">Stage 4 AI</a>
+                <a href="#stage5" class="hover:text-cyan-400 transition-smooth">Stage 5 AI</a>
+                <a href="#creators" class="hover:text-cyan-400 transition-smooth">Team</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" aria-label="Toggle Menu" class="text-white hover:text-cyan-400 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#destinations" class="block py-2 hover:text-cyan-400">Destinations</a>
+            <a href="#quickinfo" class="block py-2 hover:text-cyan-400">Quick Facts</a>
+            <a href="#funfacts" class="block py-2 hover:text-cyan-400">Fun Facts</a>
+            <a href="#food" class="block py-2 hover:text-cyan-400">Food</a>
+            <a href="#stage4" class="block py-2 hover:text-cyan-400">Stage 4 AI</a>
+            <a href="#stage5" class="block py-2 hover:text-cyan-400">Stage 5 AI</a>
+            <a href="#creators" class="block py-2 hover:text-cyan-400">Team</a>
+        </div>
+    </header>
+
+    <!-- 1. Opening / Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 relative pt-20">
+        <div class="max-w-4xl mx-auto text-white space-y-6">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide uppercase border border-white/20 shadow-lg">
+                <i class="fa-solid fa-sparkles text-amber-400"></i> School Project: Egypt as You've Never Seen It Before
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow-md">
+                Egypt as You've Never Seen It Before
+            </h1>
+            <p class="text-lg sm:text-2xl text-slate-200 font-light max-w-2xl mx-auto drop-shadow">
+                Explore Egypt Through AI — Journeying from Marsa Alam's crystal Red Sea waters to St. Catherine's majestic mountain peaks.
+            </p>
+            <div class="pt-6 flex flex-wrap justify-center gap-4">
+                <a href="#destinations" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold px-8 py-3.5 rounded-full shadow-xl transition-smooth transform hover:-translate-y-0.5">
+                    Start Exploring <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#quickinfo" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold px-8 py-3.5 rounded-full border border-white/30 shadow-lg transition-smooth">
+                    Discover Facts
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 & 3. Destination Reveal & Identity Section -->
+    <section id="destinations" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900">Destination Group</h2>
+            <p class="text-slate-600 text-lg">Marsa Alam & St. Catherine — Connecting Red Sea wonders with Sinai's spiritual heritage.</p>
+            <div class="w-24 h-1.5 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Marsa Alam Card -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group transition-smooth hover:shadow-2xl">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://res.cloudinary.com/kasit9gv/image/upload/v1792047488/Marsa_Alam_Turquoise_Coastline.png" alt="Marsa Alam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 cursor-pointer" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-6 pointer-events-none">
+                        <div>
+                            <span class="bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Red Sea Coast</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2">Marsa Alam</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+                    <p class="text-slate-600 leading-relaxed">
+                        Famous for its pristine coral reefs, turquoise waters, Abu Dabbad Bay, and extraordinary marine life including endangered dugongs and sea turtles.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-sm font-semibold text-cyan-600">
+                        <span><i class="fa-solid fa-water mr-2"></i> Landmark: Abu Dabbad Bay</span>
+                        <a href="#stage5" class="hover:underline flex items-center">Explore Media <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- St. Catherine Card -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100 flex flex-col group transition-smooth hover:shadow-2xl">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://res.cloudinary.com/kasit9gv/image/upload/v1792046482/unnamed.jpg" alt="St. Catherine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 cursor-pointer" onclick="openLightbox(this.src)">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-6 pointer-events-none">
+                        <div>
+                            <span class="bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Sinai Peninsula</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2">St. Catherine</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+                    <p class="text-slate-600 leading-relaxed">
+                        A historic mountain town in the heart of the Sinai Peninsula, home to Mount Sinai and the legendary 6th-century St. Catherine's Monastery.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-100 text-sm font-semibold text-amber-600">
+                        <span><i class="fa-solid fa-mountain mr-2"></i> Landmark: Mount Sinai</span>
+                        <a href="#stage4" class="hover:underline flex items-center">Explore Media <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Quick Information Section -->
+    <section id="quickinfo" class="py-20 bg-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900">Discover Quick Facts</h2>
+                <p class="text-slate-600 text-lg">Essential information about our chosen destinations.</p>
+                <div class="w-24 h-1.5 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Where is it? -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-200/60 space-y-4 hover:shadow-xl transition-smooth">
+                    <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Where Is It?</h3>
+                    <div class="space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <p><strong class="text-slate-900">Marsa Alam:</strong> Located on Egypt's Red Sea coast in the southeast.</p>
+                        <p><strong class="text-slate-900">St. Catherine:</strong> Located in the Sinai Peninsula, home to St. Catherine's Monastery.</p>
+                    </div>
+                </div>
+
+                <!-- Why is it famous? -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-200/60 space-y-4 hover:shadow-xl transition-smooth">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Why Is It Famous?</h3>
+                    <div class="space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <p><strong class="text-slate-900">Marsa Alam:</strong> Famous for beautiful Red Sea beaches, coral reefs, diving, snorkeling, and marine life.</p>
+                        <p><strong class="text-slate-900">St. Catherine:</strong> Famous for Mount Sinai, St. Catherine’s Monastery, and religious and historical significance.</p>
+                    </div>
+                </div>
+
+                <!-- A Little History -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-200/60 space-y-4 hover:shadow-xl transition-smooth">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">A Little History</h3>
+                    <div class="space-y-2 text-slate-600 text-sm leading-relaxed">
+                        <p><strong class="text-slate-900">Marsa Alam:</strong> Once known for fishing and gold mining, it later became famous for its beaches and coral reefs.</p>
+                        <p><strong class="text-slate-900">St. Catherine:</strong> A historic religious area linked to Prophet Moses, home to a famous 6th-century monastery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Fun Facts Section -->
+    <section id="funfacts" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900">Fascinating Fun Facts</h2>
+            <p class="text-slate-600 text-lg">Discover amazing highlights of our destinations.</p>
+            <div class="w-24 h-1.5 bg-amber-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Fact 1 -->
+            <div class="bg-gradient-to-br from-cyan-600 to-blue-700 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden group">
+                <div class="absolute -right-10 -bottom-10 text-white/10 text-9xl font-extrabold pointer-events-none">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <div class="relative z-10 space-y-3">
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Marsa Alam Fact</span>
+                    <h3 class="text-2xl font-bold">Rare Sea Creatures</h3>
+                    <p class="text-cyan-100 text-sm leading-relaxed fact-desc">
+                        Marsa Alam is famous for its rare dugongs and beautiful coral reefs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Fact 2 -->
+            <div class="bg-gradient-to-br from-amber-600 to-orange-700 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden group">
+                <div class="absolute -right-10 -bottom-10 text-white/10 text-9xl font-extrabold pointer-events-none">
+                    <i class="fa-solid fa-church"></i>
+                </div>
+                <div class="relative z-10 space-y-3">
+                    <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">St. Catherine Fact</span>
+                    <h3 class="text-2xl font-bold">Ancient Heritage</h3>
+                    <p class="text-amber-100 text-sm leading-relaxed fact-desc">
+                        Home to one of the world’s oldest Christian monasteries, built in the 6th century.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Famous Food Section -->
+    <section id="food" class="py-20 bg-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900">Famous Local Food</h2>
+                <p class="text-slate-600 text-lg">Taste the unique flavors of the Red Sea coast and Bedouin mountain traditions.</p>
+                <div class="w-24 h-1.5 bg-emerald-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-5xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-slate-200/60">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-utensils"></i> Regional Cuisine
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Grilled Fish & Bedouin Bread</h3>
+                    <div class="space-y-4 text-slate-600">
+                        <div class="border-l-4 border-cyan-500 pl-4 space-y-1">
+                            <h4 class="font-bold text-slate-900">Marsa Alam: Grilled Fish</h4>
+                            <p class="text-sm">Freshly caught seafood grilled with traditional coastal spices.</p>
+                        </div>
+                        <div class="border-l-4 border-amber-500 pl-4 space-y-1">
+                            <h4 class="font-bold text-slate-900">St. Catherine: Bedouin Bread</h4>
+                            <p class="text-sm">Traditional unleavened bread baked over open desert fires by local Bedouin tribes.</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 text-sm italic">
+                        Marsa Alam: A beautiful Red Sea city famous for beaches and coral reefs.<br>
+                        St. Catherine: A historic mountain town famous for religious sites and stunning mountains.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg h-48 sm:h-64">
+                        <img src="https://res.cloudinary.com/kasit9gv/image/upload/v1792047333/images.jpg" alt="Egyptian Food 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg h-48 sm:h-64">
+                        <img src="https://res.cloudinary.com/kasit9gv/image/upload/v1792047326/image.png" alt="Egyptian Food 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer" onclick="openLightbox(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Stage 4 Work - Flexible Media -->
+    <section id="stage4" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <span class="bg-cyan-100 text-cyan-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Stage 4 Student Work</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900">St. Catherine Through AI</h2>
+            <p class="text-slate-600 text-lg">Stage 4 students reimagined St. Catherine using AI.</p>
+            <div class="w-24 h-1.5 bg-cyan-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="max-w-2xl mx-auto">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200/60 flex flex-col">
+                <div class="relative overflow-hidden h-80 bg-slate-900 flex items-center justify-center">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="https://res.cloudinary.com/kasit9gv/video/upload/v1792046341/St._Cathrien.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <p class="text-slate-600 text-sm">St. Catherine AI project video created by Stage 4 students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Stage 5 Work - Flexible Media -->
+    <section id="stage5" class="py-20 bg-slate-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Stage 5 Student Work</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900">Our AI Journey</h2>
+                <p class="text-slate-600 text-lg">Stage 5 students used AI to imagine themselves visiting Marsa Alam and St. Catherine.</p>
+                <div class="w-24 h-1.5 bg-amber-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Stage 5 Video 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200/60 flex flex-col">
+                    <div class="relative overflow-hidden h-72 bg-slate-900 flex items-center justify-center">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="https://res.cloudinary.com/kasit9gv/video/upload/v1792046346/Marsa_Allam.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm">Marsa Alam AI visitor experience video by Stage 5 students.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 5 Video 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200/60 flex flex-col">
+                    <div class="relative overflow-hidden h-72 bg-slate-900 flex items-center justify-center">
+                        <video controls class="w-full h-full object-cover">
+                            <source src="https://res.cloudinary.com/kasit9gv/video/upload/v1792046349/St.Cathrien.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm">St. Catherine journey exploration video by Stage 5 students.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9 & 10. Student Creator Section & Footer -->
+    <footer id="creators" class="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+            <div class="space-y-3">
+                <div class="inline-flex items-center gap-2 bg-amber-500 text-slate-900 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">
+                    <i class="fa-solid fa-graduation-cap"></i> Class 6B
+                </div>
+                <h3 class="text-2xl font-bold">Project Creators</h3>
+                <p class="text-slate-400 text-sm">Dedicated students who designed and built this interactive showcase.</p>
+            </div>
+            <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/60 text-center space-y-2">
+                <h4 class="text-amber-400 font-semibold text-lg">Student Team</h4>
+                <p class="text-white font-bold text-xl tracking-wide">Malek, Rokaya, Ahmed, Mazen, Talia</p>
+                <p class="text-slate-400 text-xs uppercase tracking-wider">Class: 6B</p>
+            </div>
+            <div class="space-y-4 text-right md:text-right">
+                <p class="text-slate-400 text-sm">Designed with HTML, CSS, JavaScript and AI.</p>
+                <a href="#" class="inline-flex items-center justify-center bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg transition-smooth">
+                    <i class="fa-solid fa-arrow-up mr-2"></i> Back to Top
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+            &copy; 2026 Egypt as You've Never Seen It Before. School Project. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 cursor-pointer" onclick="closeLightbox()">
+        <div class="relative max-w-4xl max-h-[90vh]">
+            <img id="lightbox-img" src="" alt="Enlarged view" class="max-w-full max-h-[85vh] rounded-2xl object-contain shadow-2xl">
+            <button class="absolute top-4 right-4 bg-white/20 hover:bg-white/40 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl transition-smooth" onclick="closeLightbox()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Lightbox Functions
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
